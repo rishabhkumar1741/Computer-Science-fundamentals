@@ -20,6 +20,6 @@ The Collection framework represents a unified architecture for storing and manip
 9 What is the difference between Java collection and Java collections?
 ````
 ## Hierarchy of Collection Framework
-![alt text](/SS/ds1.jpg)
+![alt text](SS/ds1.jpg)
 
 
