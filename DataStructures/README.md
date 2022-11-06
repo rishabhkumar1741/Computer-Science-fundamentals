@@ -22,4 +22,8 @@ The Collection framework represents a unified architecture for storing and manip
 ## Hierarchy of Collection Framework
 ![alt text](SS/ds1.jpg)
 
+## Java ArrayList
+Java ArrayList class uses a dynamic array
+for storing the elements. It is like an array, but there is no size limit. We can add or remove elements anytime. So, it is much more flexible than the traditional array. It is found in the java.util package.
+
 
