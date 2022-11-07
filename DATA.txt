@@ -1,0 +1,38 @@
+group:er assignment
+CUSTOMER = { 
+CUST_id,c_name,c_address,c_phoneno,c_email
+'1','Rishabh','rohini',991056,'rishabh@gmail.com'
+'2','ANUJ','PRITAMPURA',9123456,'anuj@gmail.com'
+'3','ROHIT',' rohni sec 11',123345,'rohit@gmail.com'
+'4','RAM','dhokacpur',98765,'ram@gmail.com'
+'5','SHAM','fun',1835263,'sham@gmail.com'}
+
+Payment = {
+py_id,amount,method,CUST_id
+'123',2000,'online','1'
+'13',500,'online',3
+'156',800,'online',5
+'133',1000,'online',5}
+
+Subcription ={
+sub_type,price,date,py_id
+'Full hd',2000,'01/06/2022','123'
+'hd',500,'10/01/2022','13'
+'base',800,'02/06/2022','156'
+}
+
+Movie ={
+mov_id, title,rating,genre_id
+'1','Snakes on a Plane',4,'1'
+'2','Three Days of the Condor',3,'2'
+'3','They Shoot Horses',5,'4'
+}
+
+Genre = {
+genre_id,genre,description
+'1','Action','action mov'
+'2','Fantasy','Fantasy mov'
+'3','Mystery','Mystery mov'
+'4','Thriller','Thriller mov'
+'5','Comedy','Comedy mov'
+}
