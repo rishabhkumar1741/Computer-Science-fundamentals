@@ -58,7 +58,7 @@ Column name + data type + constraints if any
 CREATE TABLE person (
 id int, 
 first_name VARCHAR (50), 
-last name VARCHAR (50), 
+last_name VARCHAR (50), 
 gender VARCHAR (6),
 date of birth TIMESTAMP,
 )
@@ -134,9 +134,47 @@ OR country_of_birth = 'France' OR country_of_birth = 'Brazil'
 ===> GOOD WAY
 
 SELECT * test-# FROM person
-WHERE country_of _birth IN ('China', 'Brazil', 'France")
+WHERE country_of_birth IN ('China', 'Brazil', 'France")
 ````
 # BETWEEN
+````
+SELECT * FROM person 
+WHERE id BETWEEN 1 AND 10;
+
+SELECT * FROM person
+WHERE date_of_birth BETWEEN DATE '2022-01-01' AND '2022-11-22';
+````
+
+# LIKE
+% is called wild card 
+_ dash compared with single character
+````
+SELECT * FROM person WHERE email LIKE '%.com';
+
+SELECT * FROM person
+WHERE email LIKE '%@facebook%';
+
+SELECT * FROM person 
+WHERE email LIKE '_______%';
+````
+![alt text](DBMS_SS/6.png)
+
+# GROUP BY
+````
+SELECT country_of_birth,COUNT(country_of_birth) FROM person GROUP BY country_of_birth;
+````
+![alt text](DBMS_SS/7.png)
+# HAVING 
+- Having work with group by  
+- having is used for adding extra condition/filtering
+````
+SELECT country_of_birth,COUNT(country_of_birth) FROM person GROUP BY country_of_birth HAVING count(*) >5 ;
+````
+# Aggregate Functions
+An aggregate function performs a calculation on a set of values, and returns a single value. Except for COUNT(*) , aggregate functions ignore null values. Aggregate functions are often used with the GROUP BY clause of the SELECT statement. All aggregate functions are deterministic
+
+
+
 
 
 
