@@ -173,6 +173,90 @@ SELECT country_of_birth,COUNT(country_of_birth) FROM person GROUP BY country_of_
 # Aggregate Functions
 An aggregate function performs a calculation on a set of values, and returns a single value. Except for COUNT(*) , aggregate functions ignore null values. Aggregate functions are often used with the GROUP BY clause of the SELECT statement. All aggregate functions are deterministic
 
+##  MAX()/MIN()/AVG()/ROUND()
+````
+SELECT MAX(price) FROM car;
+SELECT MIN(price) FROM car;
+SELECT AVG(price) FROM car;
+SELECT ROUND(AVG(price)) FROM car;
+SELECT make,MAX(price) FROM car GROUP BY make LIMIT 5;
+````
+![alt text](DBMS_SS/8.png)
+
+## SUM()
+````
+SELECT SUM(price) from car;
+````
+# ARITHMETIC OPERATORS
+![alt text](DBMS_SS/9.png)
+
+## WORKING WITH ARITHMETIC OPERATORS
+````
+SELECT id, make, model, price, ROUND(price * •10, 2), ROUND(price - (price *• 10),2 FROM car;
+````
+![alt text](DBMS_SS/10.png)
+
+# ALIAS
+````
+SELECT id,make,model,price, ROUND((price * .10)) AS PRICE_OF_CAR  from car;
+````
+# COALESCE
+````
+SELECT COALESCE(email,'email not present') from person;
+````
+# NOW()
+![alt text](DBMS_SS/11.png)
+
+# PRIMARY KEY
+### Drop primary key
+````
+ALTER TABLE person DROP CONSTRAINT person_pkey;
+````
+
+# ADDING PK CONSTRAINTS
+````
+Alter TABLE person ADD PRIMARY KEY (id);
+````
+# UNIQUE CONSTRAINTS
+````
+ALTER TABLE person ADD CONSTRAINT unique_email_id UNIQUE(email);
+
+ALTER TABLE person ADD UNIQUE (email);
+````
+# DROP CONSTRAINTS 
+````
+ALTER TABLE person DROP CONSTRAINT unique_email_id;
+````
+# CHECK CONSTRAINS
+````
+SELECT DISTINCT gender FROM person;
+
+ALTER TABLE person ADD CONSTRAINT gender_contraint CHECK (gender = 'Female' OR gender = 'Male');
+````
+# delete row in table
+````
+DELETE FROM person where id=1;
+DELETE FROM person WHERE gender = 'Male'
+
+````
+# UPDATING RECORDS
+````
+UPDATE person SET email = "ommar@gmail.com' WHERE id = 2011;
+
+UPDATE person SET first_name = 'Omar' , last_name = 'Montana', email = "omar . montana@hotmail.com' WHERE id = 2011;
+````
+# FOREIGN KEYS RELATIONSHIPS
+
+
+
+
+
+
+
+
+
+
+
 
 
 
